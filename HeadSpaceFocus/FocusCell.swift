@@ -21,6 +21,7 @@ class FocusCell: UICollectionViewCell {
     func configure(_ item : Focus) {
         titleLabel.text = item.title
         descriptionLabel.text = item.description
-        thumnailImageView.image = UIImage(named: item.imageName)?.withRenderingMode(.alwaysOriginal)
+        thumnailImageView.image = UIImage(systemName: item.imageName)?.withRenderingMode(.alwaysOriginal)
+//        thumnailImageView.image = UIImage(named: item.imageName)?.withRenderingMode(.alwaysOriginal)
     }
 }

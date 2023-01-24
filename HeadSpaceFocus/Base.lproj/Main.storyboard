@@ -78,18 +78,37 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnk-rf-jt7">
+                                <rect key="frame" x="50" y="802" width="314" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nud-wS-64z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshBtnTapped:" destination="07K-eu-e7f" eventType="touchUpInside" id="5ep-aX-JuE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIF-vf-ToX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xIF-vf-ToX" firstAttribute="trailing" secondItem="BLM-Op-fRQ" secondAttribute="trailing" id="36L-NC-BbH"/>
+                            <constraint firstItem="Cnk-rf-jt7" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" constant="50" id="AZX-M0-eL1"/>
                             <constraint firstAttribute="bottom" secondItem="BLM-Op-fRQ" secondAttribute="bottom" id="G3t-is-hXd"/>
+                            <constraint firstItem="xIF-vf-ToX" firstAttribute="bottom" secondItem="Cnk-rf-jt7" secondAttribute="bottom" id="bog-B6-XoO"/>
+                            <constraint firstItem="Cnk-rf-jt7" firstAttribute="centerX" secondItem="xIF-vf-ToX" secondAttribute="centerX" id="cYG-47-2Zj"/>
                             <constraint firstItem="BLM-Op-fRQ" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" id="x9C-G8-YDC"/>
                             <constraint firstItem="BLM-Op-fRQ" firstAttribute="top" secondItem="xIF-vf-ToX" secondAttribute="top" id="yot-LO-tI9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BLM-Op-fRQ" id="EF2-nV-tNP"/>
+                        <outlet property="refreshBtn" destination="Cnk-rf-jt7" id="V1i-0P-BnI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-hT-Jgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,6 +120,9 @@
         <image name="cloud.drizzle.fill" catalog="system" width="126" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
